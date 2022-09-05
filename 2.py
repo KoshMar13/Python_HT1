@@ -1,14 +1,14 @@
 # Напишите программу для проверки истинности утверждения ¬(X ⋁ Y ⋁ Z) = ¬X ⋀ ¬Y ⋀ ¬Z для всех значений предикат.
 
 def TrueCheck(a, b, c):
-    left = bool(not (a+b+c))
-    right = bool(not a*(not b)*(not c))
+    left = (not (a or b or c))
+    right = ((not a) and (not b) and (not c))
     return left == right
 
 # ручной режим
-# x = bool(int(input('Insert first predicate (0 or 1): ')))
-# y = bool(int(input('Insert second predicate (0 or 1): ')))
-# z = bool(int(input('Insert third predicate (0 or 1): ')))
+# x = (input('Insert first predicate (0 or 1): '))
+# y = (input('Insert second predicate (0 or 1): '))
+# z = (input('Insert third predicate (0 or 1): '))
 # print(TrueCheck(x, y, z))
 
 
